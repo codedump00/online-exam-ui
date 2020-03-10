@@ -3,6 +3,8 @@ import { Button, Switch } from 'antd'
 import { Link } from 'react-router-dom'
 import Logo from '../logo.svg'
 
+import './components.css'
+
 interface Props {
 
 }

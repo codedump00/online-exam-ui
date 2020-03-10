@@ -1,6 +1,8 @@
 import React, { ReactElement } from 'react'
 import { Form, Input, Button, Checkbox } from 'antd';
 
+import './pages.css'
+
 interface Props {
 
 }

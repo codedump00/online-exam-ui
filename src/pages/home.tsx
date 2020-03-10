@@ -2,6 +2,8 @@ import React from "react"
 import { Button } from "antd"
 import { Link } from "react-router-dom"
 
+import './pages.css'
+
 export default function HomePage() {
   return <div className="home__page">
     <h2>Korean Online Examination</h2>

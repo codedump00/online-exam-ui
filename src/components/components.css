@@ -1,0 +1,32 @@
+/* Navbar  Styles */
+
+.nav__header {
+    width: 100%;
+    height: 8vh;
+    box-shadow: 0 0 10px var(--medium-grey);
+}
+
+.nav__header > nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.nav__title {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0.5rem;
+    width: 4.5vw;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+@media only screen and (max-width: 450px) {
+    .nav__title {
+        width: 14vw;
+    }
+}

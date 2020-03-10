@@ -1,0 +1,35 @@
+/* Home Page */
+.home__page {
+    width: 100%;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Login Page */
+.login__page {
+    display: grid;
+    place-items: center;
+}
+
+.login__forms {
+    min-width: 400px;
+}
+
+.login__title {
+    margin: 0;
+    margin-top: 2.5rem;
+    margin-bottom: 2rem;
+    opacity: 0.8;
+    text-align: center;
+}
+
+@media only screen and (max-width: 450px) {
+    .login__forms {
+        min-width: auto;
+        padding: 0;
+        margin: 0;
+    }
+}
