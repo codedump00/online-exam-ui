@@ -26,6 +26,101 @@
     text-align: center;
 }
 
+/* Exam Page */
+.exam__page {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* flex-direction: column; */
+    grid-template-columns: 1fr 2fr;
+}
+
+.exam__q__1 {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 2rem;
+    margin-left: 1rem;
+}
+
+.side__menu {
+    display: grid;
+    justify-items: start;
+    align-content: flex-start;
+    gap: 0.5rem;
+    padding: 0rem 1rem;
+    border-right: 1px solid var(--medium-grey);
+    position: fixed;
+    width: 33vw;
+}
+
+.side__menu__controls {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+.side__menu__top {
+    justify-self: center;
+}
+
+.side__menu__start {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.side__data {
+    display: grid;
+    place-items: start;
+}
+
+.side__data > b {
+    opacity: 0.8;
+    font-size: 0.9rem;
+}
+
+.side__menu__qa {
+    width: 70%;
+    margin: 0 auto;
+    /* display: flex; */
+    /* justify-content: center; */
+}
+
+.data__title {
+    opacity: 0.7;
+    font-size: 0.98rem !important;
+}
+
+.side__titles {
+    color: var(--main-blue) !important;
+    opacity: 0.6;
+    margin-top: 1rem;
+    font-size: 1rem !important;
+}
+
+.exam__qa__container {
+}
+
+.exam__answers__holder {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.exam__q__title {
+    color: var(--dark-grey) !important;
+    opacity: 0.65;
+    font-size: 0.95rem !important;
+    margin-bottom: 1rem !important;
+}
+
 @media only screen and (max-width: 450px) {
     .login__forms {
         min-width: auto;

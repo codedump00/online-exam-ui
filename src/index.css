@@ -4,6 +4,9 @@
     --light-grey: #f0f0f0;
     --medium-grey: #d9d9d9;
     --dark-grey: #141414;
+    --eerie-black: #22181c;
+    --jpn-indigo: #2b3d41;
+    --main-blue: #2529f7;
 }
 
 html {
@@ -15,7 +18,6 @@ html {
     margin: 0;
 }
 body {
-    margin: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     width: 100%;
@@ -31,6 +33,12 @@ body {
 .main {
     width: 100%;
     min-height: 92vh;
+    margin-top: 8vh;
+}
+
+footer {
+    display: flex;
+    justify-content: flex-end;
 }
 
 @media only screen and (max-width: 450px) {

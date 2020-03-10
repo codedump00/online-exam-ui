@@ -4,6 +4,10 @@
     width: 100%;
     height: 8vh;
     box-shadow: 0 0 10px var(--medium-grey);
+    position: fixed;
+    top: 0;
+    background-color: #fff;
+    z-index: 1111;
 }
 
 .nav__header > nav {
@@ -15,7 +19,7 @@
 }
 
 .nav__title {
-    height: 100%;
+    height: 8vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,6 +27,19 @@
     width: 4.5vw;
     background-repeat: no-repeat;
     background-size: 100% 100%;
+}
+
+.nav__title:hover {
+    cursor: pointer;
+}
+
+.nav__avatar {
+    margin-right: 1rem !important;
+    cursor: pointer;
+}
+
+.nav__avatar:hover {
+    box-shadow: 0 0 4px var(--medium-grey);
 }
 
 @media only screen and (max-width: 450px) {

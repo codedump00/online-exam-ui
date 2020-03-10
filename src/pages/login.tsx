@@ -2,6 +2,7 @@ import React, { ReactElement } from 'react'
 import { Form, Input, Button, Checkbox } from 'antd';
 
 import './pages.css'
+import { useHistory } from 'react-router';
 
 interface Props {
 
@@ -16,12 +17,17 @@ const tailLayout = {
 };
 
 export default function LoginPage(): ReactElement {
+
+  const history = useHistory();
+
   const onFinish = (values: any) => {
     console.log('Success:', values);
   };
 
   const onFinishFailed = (errorInfo: any) => {
     console.log('Failed:', errorInfo);
+    history.push('/exam');
+
   };
   return (
 
