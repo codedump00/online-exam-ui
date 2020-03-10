@@ -1,13 +1,93 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import '~antd/dist/antd.css';
+
+:root {
+    --light-grey: #f0f0f0;
+    --medium-grey: #d9d9d9;
+    --dark-grey: #141414;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+body {
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+}
+
+.layout {
+    width: 100%;
+}
+
+.main {
+    width: 100%;
+    min-height: 92vh;
+}
+
+/* Navbar  Styles */
+
+.nav__header {
+    width: 100%;
+    height: 8vh;
+    box-shadow: 0 0 10px var(--medium-grey);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.nav__title {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-left: 0.5rem;
+}
+
+/* Home Page */
+
+.home__page {
+    width: 100%;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Login Page */
+
+.login__page {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login__forms {
+    min-width: 400px;
+}
+
+.login__title {
+    margin-top: 2.5rem;
+    margin-bottom: 2rem;
+    opacity: 0.8;
 }
