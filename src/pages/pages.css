@@ -18,11 +18,19 @@
     min-width: 400px;
 }
 
-.login__title {
+form {
+    display: grid;
+    align-items: center;
+    min-height: 200px;
+    margin-top: 2rem;
+}
+
+.form__label {
     margin: 0;
-    margin-top: 2.5rem;
-    margin-bottom: 2rem;
-    opacity: 0.8;
+    /* margin-top: 2.5rem; */
+    /* margin-bottom: 2rem; */
+    opacity: 0.7;
+    font-weight: bold;
     text-align: center;
 }
 
@@ -44,6 +52,11 @@
     grid-template-rows: auto;
     gap: 2rem;
     margin-left: 1rem;
+}
+
+.exam__top__bar {
+    display: flex;
+    justify-content: space-between;
 }
 
 .side__menu {

@@ -1,26 +1,26 @@
 const Questions: IQuestions[] = [
     {
-        question: 'What is the capital city of Nepal?',
-        answers: ['Kathmandu', 'Pokhara', 'Nepalgunj', 'Hetauda'],
+        question: '네팔의 수도는 무엇입니까?',
+        answers: ['카트만두', '포카라', '네팔 군이', '헤 타우 다'],
         index: 1,
     },
     {
-        question: 'What is the capital city of Nepal?',
-        answers: ['Kathmandu', 'Pokhara', 'Nepalgunj', 'Hetauda'],
+        question: '네팔의 수도는 무엇입니까?',
+        answers: ['카트만두', '포카라', '네팔 군이', '헤 타우 다'],
         index: 2,
     },
     {
-        question: 'What is the capital city of Nepal?',
-        answers: ['Kathmandu', 'Pokhara', 'Nepalgunj', 'Hetauda'],
+        question: '네팔의 수도는 무엇입니까?',
+        answers: ['카트만두', '포카라', '네팔 군이', '헤 타우 다'],
         index: 3,
     },
     {
-        question: 'What is the capital city of Nepal?',
-        answers: ['Kathmandu', 'Pokhara', 'Nepalgunj', 'Hetauda'],
+        question: '네팔의 수도는 무엇입니까?',
+        answers: ['카트만두', '포카라', '네팔 군이', '헤 타우 다'],
         index: 4,
     },
     {
-        question: 'What is the capital city of Nepal?',
+        question: '네팔의 수도는 무엇입니까?',
         index: 5,
     },
 ];

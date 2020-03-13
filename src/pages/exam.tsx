@@ -1,5 +1,5 @@
 import React, { ReactElement, useState, useEffect } from 'react'
-import { Typography, Checkbox, Input, Button } from 'antd'
+import { Typography, Checkbox, Input, Button, Pagination } from 'antd'
 import Chart from 'chart.js'
 
 import './pages.css'
@@ -50,7 +50,9 @@ export default function ExamPage({ setNavbar }: Props): ReactElement {
         },
       });
   })
-
+  function onShowSizeChange(current: any, pageSize: any) {
+    console.log(current, pageSize);
+  }
   return (
     <div className="exam__page">
       <div></div>
@@ -76,6 +78,21 @@ export default function ExamPage({ setNavbar }: Props): ReactElement {
         </div>
       </div>
       <div className="exam__q__1">
+        <div className="exam__top__bar">
+          <div className="qa__btns">
+            <Button type="primary">Next</Button>
+            <Button type="dashed" style={{ marginLeft: '1rem' }} disabled>Submit</Button>
+          </div>
+          <div className="side__bar">
+            <Pagination
+              showSizeChanger
+              onShowSizeChange={onShowSizeChange}
+              defaultCurrent={5}
+              pageSize={5}
+              total={20}
+            />
+          </div>
+        </div>
         {
           Questions.map((each: IQuestions) =>
             <div className="exam__qa__container">
@@ -93,10 +110,7 @@ export default function ExamPage({ setNavbar }: Props): ReactElement {
             </div>
           )
         }
-        <div>
-          <Button type="primary">Next</Button>
-          <Button type="dashed" style={{ marginLeft: '1rem' }} disabled>Submit</Button>
-        </div>
+
       </div>
     </div>
   )

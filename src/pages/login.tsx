@@ -1,73 +1,48 @@
 import React, { ReactElement } from 'react'
-import { Form, Input, Button, Checkbox } from 'antd';
+import { Input, Button } from 'antd';
+import { UserOutlined, KeyOutlined } from '@ant-design/icons';
+import { useHistory } from 'react-router';
 
 import './pages.css'
-import { useHistory } from 'react-router';
 
 interface Props {
 
 }
 
-const layout = {
-  labelCol: { span: 8 },
-  wrapperCol: { span: 16 },
-};
-const tailLayout = {
-  wrapperCol: { offset: 8, span: 16 },
-};
-
 export default function LoginPage(): ReactElement {
 
   const history = useHistory();
-
-  const onFinish = (values: any) => {
-    console.log('Success:', values);
-  };
-
-  const onFinishFailed = (errorInfo: any) => {
-    console.log('Failed:', errorInfo);
+  const handlelogin = () => {
     history.push('/exam');
 
   };
+
   return (
-
     <div className="login__page">
-      <h1 className="login__title">Please login to take examination</h1>
       <div className="login__forms">
-        <Form
-          {...layout}
-          name="basic"
-          initialValues={{ remember: true }}
-          onFinish={onFinish}
-          onFinishFailed={onFinishFailed}
-        >
-          <Form.Item
-            label="Username"
-            name="username"
-            rules={[{ required: true, message: 'Please input your username!' }]}
-          >
-            <Input />
-          </Form.Item>
+        <form>
+          <h3 className="form__label">Please provide following details!</h3>
+          <Input
+            placeholder="Enter your username or email"
+            prefix={<UserOutlined className="site-form-item-icon" />}
 
-          <Form.Item
-            label="Password"
-            name="password"
-            rules={[{ required: true, message: 'Please input your password!' }]}
-          >
-            <Input.Password />
-          </Form.Item>
+            size="large"
+          />
+          <Input.Password
+            placeholder="Enter your password"
+            prefix={<KeyOutlined className="site-form-item-icon" />}
+            size="large"
+          />
+          {/* <Checkbox>Remember Me!</Checkbox> */}
+          <Button type="primary" onClick={handlelogin}>Login</Button>
 
-          <Form.Item {...tailLayout} name="remember" valuePropName="checked">
-            <Checkbox>Remember me</Checkbox>
-          </Form.Item>
-
-          <Form.Item {...tailLayout}>
-            <Button type="primary" htmlType="submit">
-              Submit
-              </Button>
-          </Form.Item>
-        </Form>
+        </form>
       </div>
     </div>
   )
 }
+// suffix={
+            //   <Tooltip title="Extra information">
+            //     <InfoCircleOutlined style={{ color: 'rgba(0,0,0,.45)' }} />
+            //   </Tooltip>
+            // }
