@@ -11,7 +11,6 @@ import NotFoundPage from './404';
 import Navbar from '../components/navbar';
 import '../index.css';
 import ExamPage from './exam';
-import { ThemeProvider } from '../theme';
 
 interface Props {
 }
@@ -21,31 +20,29 @@ export default function Layout(): ReactElement {
   const [navbar, setNavbar] = useState(Navbar);
 
   return (
-    <ThemeProvider>
-      <Router>
-        <div className="layout">
-          {navbar}
-          <main className="main">
-            <Switch>
-              <Route exact path="/">
-                <HomePage />
-              </Route>
-              <Route path="/login">
-                <LoginPage />
-              </Route>
-              <Route path="/exam">
-                <ExamPage setNavbar={setNavbar} />
-              </Route>
-              <Route>
-                <NotFoundPage />
-              </Route>
-            </Switch>
-          </main>
-          <footer>
-            © {new Date().getFullYear()}
-          </footer>
-        </div>
-      </Router>
-    </ThemeProvider>
+    <Router>
+      <div className="layout">
+        {navbar}
+        <main className="main">
+          <Switch>
+            <Route exact path="/">
+              <HomePage />
+            </Route>
+            <Route path="/login">
+              <LoginPage />
+            </Route>
+            <Route path="/exam">
+              <ExamPage setNavbar={setNavbar} />
+            </Route>
+            <Route>
+              <NotFoundPage />
+            </Route>
+          </Switch>
+        </main>
+        <footer>
+          © {new Date().getFullYear()}
+        </footer>
+      </div>
+    </Router>
   )
 }

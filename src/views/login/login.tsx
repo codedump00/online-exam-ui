@@ -34,7 +34,10 @@ export default function LoginPage(): ReactElement {
             size="large"
           />
           {/* <Checkbox>Remember Me!</Checkbox> */}
-          <Button type="primary" onClick={handlelogin}>Login</Button>
+          <Button
+            className="normal__btn"
+            type="primary"
+            onClick={handlelogin}>Login</Button>
 
         </form>
       </div>

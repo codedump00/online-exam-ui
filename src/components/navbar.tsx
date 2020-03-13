@@ -15,26 +15,27 @@ interface Props {
 
 export default function Navbar(): ReactElement {
 
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState(localStorage.getItem('theme') === 'true');
 
   useEffect(() => {
-    if (localStorage.getItem('theme')) {
-      setIsDark(localStorage.getItem('theme') === 'true');
-    }
+    setIsDark(localStorage.getItem('theme') === 'true');
+    handleThemeChange(localStorage.getItem('theme') === 'true')
   }, []);
 
-  useEffect(() => {
-    localStorage.setItem('theme', `${isDark}`)
-  }, [isDark]);
-
   const handleThemeChange = (checked: boolean) => {
+    localStorage.setItem('theme', `${checked}`)
     if (checked) {
       document.documentElement.style.setProperty('--body', "#10161A");
       document.documentElement.style.setProperty('--shadow', "#141414");
+      document.documentElement.style.setProperty('--card', "#394B59");
+      document.documentElement.style.setProperty('--text', "#f0f0f0");
+
 
     } else {
-      document.documentElement.style.setProperty('--body', "#fff");
+      document.documentElement.style.setProperty('--body', "#ffffff");
       document.documentElement.style.setProperty('--shadow', "#d9d9d9");
+      document.documentElement.style.setProperty('--card', "#ffffff");
+      document.documentElement.style.setProperty('--text', "#f0f0f0");
     }
   }
 
@@ -49,6 +50,7 @@ export default function Navbar(): ReactElement {
         </Link>
         <div className="nav__links">
           <Switch
+            defaultChecked={isDark}
             onChange={handleThemeChange}
             checkedChildren={<div style={{
               width: '15px',
@@ -73,10 +75,10 @@ export default function Navbar(): ReactElement {
           </Link>
           <Popover
             placement="bottomLeft"
-            content={<div className="popup__menu">
-              <Button type="link">Dashboard</Button>
-              <Button type="link">Home</Button>
-              <Button type="link" icon={<LogoutOutlined />}>Logout</Button>
+            content={<div>
+              <p className="popup__over">Dashboard</p>
+              <p className="popup__over">Home</p>
+              <p className="popup__over">Logout</p>
             </div>}
           >
             <Avatar

@@ -4,6 +4,9 @@
 :root {
     --body: #fff;
     --shadow: #d9d9d9;
+    --text: #141414;
+    --btn: #f0f0f0;
+    --card: #ffffff;
     --light-grey: #f0f0f0;
     --medium-grey: #d9d9d9;
     --dark-grey: #141414;
@@ -28,6 +31,7 @@ body {
     margin: 0;
     font-size: 16px;
     background-color: var(--body);
+    color: var(--text);
 }
 
 .layout {
@@ -43,6 +47,11 @@ body {
 footer {
     display: flex;
     justify-content: flex-end;
+}
+
+.normal__btn {
+    color: var(--card);
+    font-weight: bold;
 }
 
 @media only screen and (max-width: 450px) {
