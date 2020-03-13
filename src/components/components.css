@@ -42,6 +42,12 @@
     box-shadow: 0 0 4px var(--medium-grey);
 }
 
+.popup__menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
 @media only screen and (max-width: 450px) {
     .nav__title {
         width: 14vw;

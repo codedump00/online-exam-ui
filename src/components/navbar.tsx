@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react'
 import { Button, Switch, Avatar, Popover } from 'antd'
-import { UserOutlined } from '@ant-design/icons';
+import { UserOutlined, LogoutOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom'
 import Logo from '../logo.svg'
 import sun from '../sun.svg'
@@ -48,9 +48,10 @@ export default function Navbar(): ReactElement {
           </Link>
           <Popover
             placement="bottomLeft"
-            content={<div>
-              <p>Content</p>
-              <p>Content</p>
+            content={<div className="popup__menu">
+              <Button type="link">Dashboard</Button>
+              <Button type="link">Home</Button>
+              <Button type="link" icon={<LogoutOutlined />}>Logout</Button>
             </div>}
           >
             <Avatar

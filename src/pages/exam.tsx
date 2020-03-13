@@ -102,7 +102,7 @@ export default function ExamPage({ setNavbar }: Props): ReactElement {
                   <TextArea
                     value={textValue}
                     onChange={onTextChange}
-                    placeholder="Controlled autosize"
+                    placeholder="너의 답"
                     autoSize={{ minRows: 3, maxRows: 5 }}
                   />
                 }

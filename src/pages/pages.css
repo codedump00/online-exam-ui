@@ -59,6 +59,10 @@ form {
     justify-content: space-between;
 }
 
+.side__bar{
+    margin-right: 1rem;
+}
+
 .side__menu {
     display: grid;
     justify-items: start;
