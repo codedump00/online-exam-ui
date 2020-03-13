@@ -2,6 +2,8 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
 :root {
+    --body: #fff;
+    --shadow: #d9d9d9;
     --light-grey: #f0f0f0;
     --medium-grey: #d9d9d9;
     --dark-grey: #141414;
@@ -25,6 +27,7 @@ body {
     padding: 0;
     margin: 0;
     font-size: 16px;
+    background-color: var(--body);
 }
 
 .layout {

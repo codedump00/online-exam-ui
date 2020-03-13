@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react'
+import React, { ReactElement, useState, useEffect } from 'react'
 import { Button, Switch, Avatar, Popover } from 'antd'
 import { UserOutlined, LogoutOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom'
@@ -14,6 +14,30 @@ interface Props {
 
 
 export default function Navbar(): ReactElement {
+
+  const [isDark, setIsDark] = useState(false);
+
+  useEffect(() => {
+    if (localStorage.getItem('theme')) {
+      setIsDark(localStorage.getItem('theme') === 'true');
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('theme', `${isDark}`)
+  }, [isDark]);
+
+  const handleThemeChange = (checked: boolean) => {
+    if (checked) {
+      document.documentElement.style.setProperty('--body', "#10161A");
+      document.documentElement.style.setProperty('--shadow', "#141414");
+
+    } else {
+      document.documentElement.style.setProperty('--body', "#fff");
+      document.documentElement.style.setProperty('--shadow', "#d9d9d9");
+    }
+  }
+
   return (
     <header className="nav__header">
       <nav>
@@ -25,6 +49,7 @@ export default function Navbar(): ReactElement {
         </Link>
         <div className="nav__links">
           <Switch
+            onChange={handleThemeChange}
             checkedChildren={<div style={{
               width: '15px',
               height: '15px',
