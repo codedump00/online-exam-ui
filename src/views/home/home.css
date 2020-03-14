@@ -1,13 +1,23 @@
 /* Home Page */
 .home__page {
     width: 100%;
-    min-height: 50vh;
+    min-height: 90vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    background-image: url(../../onlineexam.svg);
+    background-repeat: no-repeat;
+    background-size: 60% 90%;
+    background-position: center bottom;
 }
 
 .home__head {
     color: var(--text);
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.login__prompt {
+    margin-bottom: 1rem;
 }

@@ -2,10 +2,18 @@
 .login__page {
     display: grid;
     place-items: center;
+    background-image: url(../../signin.svg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    /* background-position: center; */
+    min-height: 80vh;
+    height: 100%;
 }
 
 .login__forms {
+    margin-top: 9.7rem;
     min-width: 400px;
+    margin-right: 4rem;
 }
 
 form {

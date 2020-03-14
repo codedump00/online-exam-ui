@@ -24,7 +24,7 @@ export default function Navbar(): ReactElement {
 
   const handleThemeChange = (checked: boolean) => {
     localStorage.setItem('theme', `${checked}`)
-    if (checked) {
+    if (!checked) {
       document.documentElement.style.setProperty('--body', "#10161A");
       document.documentElement.style.setProperty('--shadow', "#141414");
       document.documentElement.style.setProperty('--card', "#394B59");

@@ -55,6 +55,7 @@
 .popup__over {
     /* background-color: var(--card); */
     color: var(--text);
+    cursor: pointer;
 }
 
 .ant-popover-arrow,

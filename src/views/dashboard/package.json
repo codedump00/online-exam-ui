@@ -1,0 +1,4 @@
+{
+    "main": "./dashboard.tsx",
+    "name": "dashboard"
+}
