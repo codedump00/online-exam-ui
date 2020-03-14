@@ -33,9 +33,10 @@
     align-content: flex-start;
     gap: 0.5rem;
     padding: 0rem 1rem;
-    border-right: 1px solid var(--medium-grey);
+    border-right: 2px solid var(--shadow);
     position: fixed;
-    width: 33vw;
+    width: 30vw;
+    height: 90vh;
 }
 
 .side__menu__controls {

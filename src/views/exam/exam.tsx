@@ -22,6 +22,8 @@ export default function ExamPage({ setNavbar }: Props): ReactElement {
   }
 
   useEffect(() => {
+    //@ts-ignore
+    document.getElementById('footer')?.style.setProperty('display', 'none');
     const canvas: any = document.getElementById('myChart');
     const ctx = canvas.getContext('2d');
     if (ctx)
@@ -49,10 +51,13 @@ export default function ExamPage({ setNavbar }: Props): ReactElement {
 
         },
       });
-  })
+  }, [])
+
   function onShowSizeChange(current: any, pageSize: any) {
     console.log(current, pageSize);
   }
+
+
   return (
     <div className="exam__page">
       <div></div>

@@ -16,7 +16,7 @@ export default function LoginPage(): ReactElement {
     history.push('/exam');
 
   };
-
+  document.getElementById('footer')?.style.setProperty('display', 'flex');
   return (
     <div className="login__page">
       <div className="login__forms">

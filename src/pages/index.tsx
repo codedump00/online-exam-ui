@@ -39,7 +39,7 @@ export default function Layout(): ReactElement {
             </Route>
           </Switch>
         </main>
-        <footer>
+        <footer id="footer">
           © {new Date().getFullYear()}
         </footer>
       </div>

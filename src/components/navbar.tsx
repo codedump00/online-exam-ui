@@ -1,6 +1,6 @@
 import React, { ReactElement, useState, useEffect } from 'react'
 import { Button, Switch, Avatar, Popover } from 'antd'
-import { UserOutlined, LogoutOutlined } from '@ant-design/icons';
+import { UserOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom'
 import Logo from '../logo.svg'
 import sun from '../sun.svg'
@@ -35,7 +35,7 @@ export default function Navbar(): ReactElement {
       document.documentElement.style.setProperty('--body', "#ffffff");
       document.documentElement.style.setProperty('--shadow', "#d9d9d9");
       document.documentElement.style.setProperty('--card', "#ffffff");
-      document.documentElement.style.setProperty('--text', "#f0f0f0");
+      document.documentElement.style.setProperty('--text', "#141414");
     }
   }
 
