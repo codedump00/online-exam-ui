@@ -15,12 +15,13 @@ interface Props {
 
 export default function Navbar(): ReactElement {
 
-  const [isDark, setIsDark] = useState(localStorage.getItem('theme') === 'true');
+  const [isLight, setIsLight] = useState(localStorage.getItem('theme') === null ? true :
+    localStorage.getItem('theme') === 'true');
 
   useEffect(() => {
-    setIsDark(localStorage.getItem('theme') === 'true');
-    handleThemeChange(localStorage.getItem('theme') === 'true')
-  }, []);
+    // setIsLight(localStorage.getItem('theme') === 'true');
+    handleThemeChange(isLight);
+  }, [isLight]);
 
   const handleThemeChange = (checked: boolean) => {
     localStorage.setItem('theme', `${checked}`)
@@ -29,8 +30,6 @@ export default function Navbar(): ReactElement {
       document.documentElement.style.setProperty('--shadow', "#141414");
       document.documentElement.style.setProperty('--card', "#394B59");
       document.documentElement.style.setProperty('--text', "#f0f0f0");
-
-
     } else {
       document.documentElement.style.setProperty('--body', "#ffffff");
       document.documentElement.style.setProperty('--shadow', "#d9d9d9");
@@ -50,7 +49,7 @@ export default function Navbar(): ReactElement {
         </Link>
         <div className="nav__links">
           <Switch
-            defaultChecked={isDark}
+            defaultChecked={isLight}
             onChange={handleThemeChange}
             checkedChildren={<div style={{
               width: '15px',

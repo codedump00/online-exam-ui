@@ -8,8 +8,9 @@ interface Props {
 export default function Dashboard(): ReactElement {
   document.getElementById('footer')?.style.setProperty('display', 'flex');
   return (
-    <div>
-
+    <div className="dashboard">
+      <div className="dash__side__menu"></div>
+      <div className="dash__main__content"></div>
     </div>
   )
 }
