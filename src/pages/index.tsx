@@ -11,6 +11,7 @@ import NotFoundPage from './404';
 import Navbar from '../components/navbar';
 import '../index.css';
 import ExamPage from './exam';
+import DashboardPage from './dashboard';
 
 interface Props {
 }
@@ -33,6 +34,9 @@ export default function Layout(): ReactElement {
             </Route>
             <Route path="/exam">
               <ExamPage setNavbar={setNavbar} />
+            </Route>
+            <Route path="/dashboard">
+              <DashboardPage />
             </Route>
             <Route>
               <NotFoundPage />

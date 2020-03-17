@@ -1,4 +1,4 @@
-import React, { ReactElement, useState, useEffect } from 'react'
+import React, { ReactElement, useEffect } from 'react'
 import { Button, Switch, Avatar, Popover } from 'antd'
 import { UserOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom'
@@ -15,23 +15,25 @@ interface Props {
 
 export default function Navbar(): ReactElement {
 
-  const [isLight, setIsLight] = useState(localStorage.getItem('theme') === null ? true :
-    localStorage.getItem('theme') === 'true');
+  const isLight = localStorage.getItem('theme') === null ? true :
+    localStorage.getItem('theme') === 'true';
 
   useEffect(() => {
     // setIsLight(localStorage.getItem('theme') === 'true');
     handleThemeChange(isLight);
-  }, [isLight]);
+  });
 
   const handleThemeChange = (checked: boolean) => {
     localStorage.setItem('theme', `${checked}`)
     if (!checked) {
-      document.documentElement.style.setProperty('--body', "#10161A");
-      document.documentElement.style.setProperty('--shadow', "#141414");
+      document.documentElement.style.setProperty('--body', "#293742");
+      document.documentElement.style.setProperty('--nav', "#293742");
+      document.documentElement.style.setProperty('--shadow', "#202B33");
       document.documentElement.style.setProperty('--card', "#394B59");
       document.documentElement.style.setProperty('--text', "#f0f0f0");
     } else {
       document.documentElement.style.setProperty('--body', "#ffffff");
+      document.documentElement.style.setProperty('--nav', "#ffffff");
       document.documentElement.style.setProperty('--shadow', "#d9d9d9");
       document.documentElement.style.setProperty('--card', "#ffffff");
       document.documentElement.style.setProperty('--text', "#141414");
@@ -75,7 +77,9 @@ export default function Navbar(): ReactElement {
           <Popover
             placement="bottomLeft"
             content={<div>
-              <p className="popup__over">Dashboard</p>
+              <Link to="/dashboard">
+                <p className="popup__over">Dashboard</p>
+              </Link>
               <p className="popup__over">Home</p>
               <p className="popup__over">Logout</p>
             </div>}

@@ -13,6 +13,7 @@
     --eerie-black: #22181c;
     --jpn-indigo: #2b3d41;
     --main-blue: #2529f7;
+    --nav: var(--body);
 }
 
 html {

@@ -1,0 +1,84 @@
+.dashboard__page {
+    width: 100%;
+    min-height: 92vh;
+    display: flex;
+    /* background-color: white; */
+}
+
+.dash__side__menu {
+    padding-top: 1rem;
+    width: 30%;
+    min-height: 92vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+}
+
+.dash__side__menu__controls {
+    display: grid;
+    padding-left: 1rem;
+    /* justify-items: flex-start; */
+    width: 100%;
+}
+
+.dash__side__data {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: 0.3rem 0;
+}
+
+.dash__side__data > b {
+    margin-right: 1rem;
+}
+
+.dash__main__content {
+    width: 70%;
+    height: 100%;
+    margin-left: auto;
+}
+
+.exam__results__container {
+    padding-left: 1rem;
+    padding-top: 1rem;
+}
+
+.exam__side__scroller {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding-left: 2rem;
+}
+
+.right__outline {
+    position: absolute;
+    right: 0;
+    top: 34%;
+    /* bottom: 50%; */
+    z-index: 11;
+    padding-right: 0.5rem;
+    cursor: pointer;
+}
+
+.left__outline {
+    position: absolute;
+    left: 10;
+    top: 34%;
+    z-index: 11;
+    cursor: pointer;
+}
+
+.overall__performance {
+    padding-left: 1rem;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.canvas__holder {
+    height: 5rem !important;
+    width: 40vw !important;
+    margin: 0 auto;
+}

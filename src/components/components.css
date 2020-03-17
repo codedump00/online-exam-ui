@@ -3,10 +3,10 @@
 .nav__header {
     width: 100%;
     height: 8vh;
-    box-shadow: 0 0 10px var(--shadow);
+    box-shadow: 0 0 0.8rem var(--shadow);
     position: fixed;
     top: 0;
-    background-color: var(--body);
+    background-color: var(--nav);
     z-index: 1111;
 }
 
