@@ -41,7 +41,7 @@ export default function Navbar(): ReactElement {
   }
 
   return (
-    <header className="nav__header">
+    <header className="nav__header" id="nav__header">
       <nav>
         <Link to="/">
           <div className="nav__title"

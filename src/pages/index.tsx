@@ -12,6 +12,7 @@ import Navbar from '../components/navbar';
 import '../index.css';
 import ExamPage from './exam';
 import DashboardPage from './dashboard';
+import ExamDetails from '../views/exam/details';
 
 interface Props {
 }
@@ -36,7 +37,12 @@ export default function Layout(): ReactElement {
               <ExamPage setNavbar={setNavbar} />
             </Route>
             <Route path="/dashboard">
-              <DashboardPage />
+              <Route exact path="/dashboard">
+                <DashboardPage />
+              </Route>
+              <Route path="/dashboard/exam/:examID/details">
+                <ExamDetails setNavbar={setNavbar} />
+              </Route>
             </Route>
             <Route>
               <NotFoundPage />

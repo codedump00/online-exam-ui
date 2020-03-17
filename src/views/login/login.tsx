@@ -13,7 +13,7 @@ export default function LoginPage(): ReactElement {
 
   const history = useHistory();
   const handlelogin = () => {
-    history.push('/exam');
+    history.push('/dashboard');
 
   };
   document.getElementById('footer')?.style.setProperty('display', 'flex');

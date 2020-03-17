@@ -1,8 +1,9 @@
 import React, { ReactElement, useEffect } from 'react'
 import './dashboard.css'
-import { Avatar, Typography, Card } from 'antd';
+import { Avatar, Typography, Card, Button } from 'antd';
 import { UserOutlined, LeftOutlined, RightOutlined } from '@ant-design/icons';
 import Chart from 'chart.js'
+import { Link } from 'react-router-dom';
 
 const { Title } = Typography;
 interface Props {
@@ -44,7 +45,7 @@ export default function DashboardPage(): ReactElement {
       ]
     };
     if (ctx) {
-      const chart = new Chart(ctx, {
+      new Chart(ctx, {
         type: 'line',
         data: {
           labels: ['Score', 'Exam Date'],
@@ -88,12 +89,17 @@ export default function DashboardPage(): ReactElement {
           </div>
           <div className="dash__side__data">
             <Title level={4} className="data__title">Upcoming Exams</Title>
-            <b>0</b>
+            <b>1</b>
           </div>
           <div className="dash__side__data">
             <Title level={4} className="data__title">Overall Performance</Title>
             <b>7/10</b>
           </div>
+        </div>
+        <div>
+          <Link to="/exam">
+            <Button type="primary">Start Exam Now</Button>
+          </Link>
         </div>
       </div>
       <div className="dash__main__content">
@@ -102,21 +108,27 @@ export default function DashboardPage(): ReactElement {
           <LeftOutlined className="left__outline" />
           <div className="exam__side__scroller">
             <Card className="exam__results__card"
-              extra={<a href="#">More</a>}
+              extra={<Link to="/dashboard/exam/bfwejfklenfe/details">
+                <Button type="link">More</Button>
+              </Link>}
               title="Weekly Exam 2020" style={{ width: 250 }}>
               <p>Total Questions    20</p>
               <p>Answered     18</p>
               <p>Result     33/40</p>
             </Card>
             <Card className="exam__results__card"
-              extra={<a href="#">More</a>}
+              extra={<Link to="/dashboard/exam/bfwejfklenfe/details">
+                <Button type="link">More</Button>
+              </Link>}
               title="Weekly Exam 2020" style={{ width: 250 }}>
               <p>Total Questions    20</p>
               <p>Answered     18</p>
               <p>Result     33/40</p>
             </Card>
             <Card className="exam__results__card"
-              extra={<a href="#">More</a>}
+              extra={<Link to="/dashboard/exam/bfwejfklenfe/details">
+                <Button type="link">More</Button>
+              </Link>}
               title="Weekly Exam 2020" style={{ width: 250 }}>
               <p>Total Questions    20</p>
               <p>Answered     18</p>
