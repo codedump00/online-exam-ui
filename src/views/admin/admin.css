@@ -1,0 +1,46 @@
+.admin__page {
+    width: 100%;
+    min-height: 92vh;
+    display: flex;
+}
+
+.admin__side__menu {
+    background-color: var(--admin-menu);
+    padding-top: 1rem;
+    /* width: 15%; */
+    min-height: 92vh;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+    position: fixed;
+}
+
+.admin__contents {
+    min-width: 85%;
+    min-height: 92vh;
+    margin-left: auto;
+}
+.user__table {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-left: 0 auto;
+    margin-top: 2rem;
+    /* width: 70vw; */
+}
+
+.admin__user__overview {
+    display: flex;
+    margin-top: 2rem;
+    /* align-items: flex-start; */
+}
+
+.info__chip {
+    display: grid;
+    place-items: center;
+}
+
+.active__user {
+    margin-left: 5rem !important;
+}

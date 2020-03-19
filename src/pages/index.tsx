@@ -13,6 +13,7 @@ import '../index.css';
 import ExamPage from './exam';
 import DashboardPage from './dashboard';
 import ExamDetails from '../views/exam/details';
+import AdminPage from './admin';
 
 interface Props {
 }
@@ -43,6 +44,9 @@ export default function Layout(): ReactElement {
               <Route path="/dashboard/exam/:examID/details">
                 <ExamDetails setNavbar={setNavbar} />
               </Route>
+            </Route>
+            <Route path="/admin">
+              <AdminPage />
             </Route>
             <Route>
               <NotFoundPage />

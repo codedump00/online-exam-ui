@@ -18,10 +18,9 @@ export default function Navbar(): ReactElement {
   const isLight = localStorage.getItem('theme') === null ? true :
     localStorage.getItem('theme') === 'true';
 
-  useEffect(() => {
-    // setIsLight(localStorage.getItem('theme') === 'true');
-    handleThemeChange(isLight);
-  });
+  // setIsLight(localStorage.getItem('theme') === 'true');
+
+
 
   const handleThemeChange = (checked: boolean) => {
     localStorage.setItem('theme', `${checked}`)
@@ -31,15 +30,17 @@ export default function Navbar(): ReactElement {
       document.documentElement.style.setProperty('--shadow', "#202B33");
       document.documentElement.style.setProperty('--card', "#394B59");
       document.documentElement.style.setProperty('--text', "#f0f0f0");
+      document.documentElement.style.setProperty('--admin-menu', "#001529");
     } else {
       document.documentElement.style.setProperty('--body', "#ffffff");
       document.documentElement.style.setProperty('--nav', "#ffffff");
       document.documentElement.style.setProperty('--shadow', "#d9d9d9");
       document.documentElement.style.setProperty('--card', "#ffffff");
       document.documentElement.style.setProperty('--text', "#141414");
+      document.documentElement.style.setProperty('--admin-menu', "#ffffff");
     }
   }
-
+  handleThemeChange(isLight);
   return (
     <header className="nav__header" id="nav__header">
       <nav>
