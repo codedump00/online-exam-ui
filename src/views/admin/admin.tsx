@@ -72,7 +72,7 @@ export default function AdminPage(): ReactElement {
               </div>
             </div>
             <div className="user__table">
-              <h2>User Details & Overview</h2>
+              <h2>Exam Details & Overview</h2>
               <UserTable />
             </div></>
         }
