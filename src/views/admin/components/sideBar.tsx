@@ -70,13 +70,13 @@ export default function AdminSideBar({ handlers }: Props) {
         theme={isLight ? 'light' : "dark"}
         inlineCollapsed={isCollapsed}
       >
-        <Menu.Item key="0" disabled>
+        {/* <Menu.Item key="0" disabled>
           {
             isCollapsed ? <MenuUnfoldOutlined onClick={toggleCollapsed} /> :
               <MenuFoldOutlined onClick={toggleCollapsed} />
           }
           <span>Toggle Menu</span>
-        </Menu.Item>
+        </Menu.Item> */}
         <Menu.Item key="overview" onClick={() => handleClick('overview')}>
           <PieChartOutlined />
           <span>Overview</span>

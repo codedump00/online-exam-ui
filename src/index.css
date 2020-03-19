@@ -35,6 +35,22 @@ body {
     color: var(--text);
 }
 
+h1,
+h2,
+h3,
+h4,
+span {
+    color: var(--text);
+    opacity: 0.9;
+    /* font-weight: bold; */
+}
+
+a,
+a > .ant-btn,
+a > .ant-btn-link > span {
+    color: #1890ff !important;
+}
+
 .layout {
     width: 100%;
 }
@@ -53,6 +69,36 @@ footer {
 .normal__btn {
     color: var(--card);
     font-weight: bold;
+}
+
+.ant-table-content,
+.ant-table-container,
+.ant-table-cell,
+.ant-pagination-item,
+.ant-card {
+    background-color: var(--card) !important;
+    color: var(--text) !important;
+    cursor: pointer;
+}
+
+.ant-card-head-title,
+.ant-typography {
+    color: var(--text) !important;
+}
+
+.ant-pagination-disabled,
+.ant-btn-dashed[disabled],
+.ant-select-selector,
+.ant-select-selector,
+.ant-pagination-item-link,
+.exam__answers__holder > .ant-input {
+    /* opacity: 0.5; */
+    background-color: var(--card) !important;
+}
+
+.ant-table tbody > tr.ant-table-row:hover > td {
+    opacity: 0.5;
+    background: var(--card);
 }
 
 @media only screen and (max-width: 450px) {

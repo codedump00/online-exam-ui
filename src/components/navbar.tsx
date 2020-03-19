@@ -1,4 +1,4 @@
-import React, { ReactElement, useEffect } from 'react'
+import React, { ReactElement } from 'react'
 import { Button, Switch, Avatar, Popover } from 'antd'
 import { UserOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom'

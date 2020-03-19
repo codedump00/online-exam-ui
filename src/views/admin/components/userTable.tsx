@@ -10,7 +10,7 @@ interface Props {
 
 }
 
-export default function UserTable({ }: Props): ReactElement {
+export default function UserTable(): ReactElement {
   const dataSource = [
     {
       key: '1',
@@ -66,5 +66,5 @@ export default function UserTable({ }: Props): ReactElement {
     },
   ];
 
-  return <Table dataSource={dataSource} columns={columns} />
+  return <Table dataSource={dataSource} columns={columns} className="cards" />
 }

@@ -80,7 +80,7 @@
 }
 
 .side__titles {
-    color: var(--main-blue) !important;
+    /* color: var(--main-blue) !important; */
     opacity: 0.6;
     margin-top: 1rem;
     font-size: 1rem !important;
@@ -97,8 +97,8 @@
 }
 
 .exam__q__title {
-    color: var(--dark-grey) !important;
-    opacity: 0.65;
+    color: var(--text) !important;
+    /* opacity: 0.65; */
     font-size: 0.95rem !important;
     margin-bottom: 1rem !important;
 }
